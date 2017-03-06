@@ -10,10 +10,14 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!--Our CSS-->
+    <link rel="stylesheet" href="css/home.css">
+
 </head>
+
 <body>
-<body>
-<nav class="navbar navbar-default navbar-static-top">
+<nav class="navbar navbar-default navbar-static-top remove-bot-pad">
     <div class="container-fluid">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
@@ -34,10 +38,48 @@
         </div>
     </div>
 </nav>
+<!--Navbar end-->
+
+
+<!--Video Section-->
+<section class="content-section video-section">
+    <div class="pattern-overlay">
+        <div class="imageOverlay"></div>
+
+        <a id="bgndVideo" class="player"
+           data-property="{videoURL:'https://www.youtube.com/watch?v=9sUu1LUC5cM',containment:'.video-section', quality:'highres', autoPlay:true, mute:true, opacity:1}">bg</a>
+        <!--<div class="container">-->
+        <!--<div class="row">-->
+        <!--<div class="col-lg-12">-->
+        <!--<h1>Full Width Video</h1>-->
+        <!--<h3>Enjoy Adding Full Screen Videos to your Page Sections</h3>-->
+        <!--</div>-->
+        <!--</div>-->
+        <!--</div>-->
+    </div>
+</section>
+<div class="strip">
+    <div class= "buttonBar text-center">
+        <div class="btn-toolbar" style ="display:inline-block;">
+            <button class="btn">Test 1</button>
+            <button class="btn">Test 1</button>
+            <button class="btn">Test 1</button>
+            <button class="btn">Test 1</button>
+        </div>
+    </div>
+</div>
+
+<!--Video Section Ends Here-->
+
+
 <!-- Bootstrap core JavaScript -->
 <!--We load jQuery before Boostrap-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="js/jquery.mb.YTPlayer.js"></script>
+<script src="js/home.js"></script>
+
+
 <!-- Placed at the end of the document so the pages load faster -->
 </body>
 </html>

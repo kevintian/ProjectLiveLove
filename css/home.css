@@ -1,0 +1,57 @@
+.video-section .pattern-overlay {
+    padding: 0px 0px 32px 0px;
+    min-height: 496px;
+    /* Incase of overlay problems just increase the min-height*/
+}
+.video-section h1, .video-section h3{
+    text-align:center;
+    color:#fff;
+}
+.video-section h1{
+    font-size:110px;
+    font-family: 'Buenard', serif;
+    font-weight:bold;
+    text-transform: uppercase;
+    margin: 40px auto 0px;
+    text-shadow: 1px 1px 1px #000;
+    -webkit-text-shadow: 1px 1px 1px #000;
+    -moz-text-shadow: 1px 1px 1px #000;
+}
+.video-section h3{
+    font-size: 25px;
+    font-weight:lighter;
+    margin: 0px auto 15px;
+}
+.video-section .buttonBar{display:none;}
+.player {font-size: 1px;}
+
+/*This removes the bottom padding of the navbar */
+.remove-bot-pad{
+    margin-bottom: 0px;
+}
+
+/*This is an overlay over the video while it is loading*/
+.imageOverlay{
+    position:absolute;
+    height:100%;
+    width:100%;
+    /*left:0;*/
+    /*top:0;*/
+    background-image: url("../img/projectlivelove.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/*Adds a strip under the video for the buttons*/
+.strip{
+    border: 1px solid rgba(0,0,0,.12);
+}
+
+/*Styling for buttons in the strip*/
+.buttonBar {
+    padding: 20px;
+}
+
+.buttonBar > .btn-toolbar > button {
+    font-weight: bolder;
+}
