@@ -1,0 +1,81 @@
+body {
+    background-color: #90d159 ! important;
+    font-family: "Century Gothic", CenturyGothic, Geneva, AppleGothic, sans-serif ! important;
+    letter-spacing: 3px ! important;
+    font-weight: lighter ! important;
+}
+
+.registerbox{
+    margin: auto ! important;
+    width: 98vw ! important;
+    height: 98vh ! important;
+    background-color: #f7f7f7 ! important;
+
+}
+.homebutton{
+    color: #2acc63 ! important;
+    letter-spacing: 4px;
+}
+
+.homebutton:hover{
+    background-color: #f7f7f7 ! important;
+}
+
+.navbar{
+    background-color: #90d159 ! important;
+    margin-bottom: 0px ! important;
+
+}
+
+.navbar-brand{
+    color: #f7f7f7 ! important;
+
+}
+
+.register-su{
+    border-top: 0px ! important;
+    border-right: 0px ! important;
+    border-left: 0px ! important;
+    border-bottom: 1px solid #888;
+    border-radius: 0px ! important;
+    letter-spacing: 3px;
+    background-color: #f7f7f7;
+
+}
+.regbtn{
+    letter-spacing: 4px;
+    background-color: #a6a6a6 ! important;
+    color: #fff ! important;
+}
+.register-su:focus{
+    outline: none;
+}
+
+.intdiv{
+    margin-right: 2vw;
+
+}
+
+#wrapper h4{
+    color: #a7a7a7;
+    margin-bottom: 35px;
+}
+
+#wrapper h2{
+    color: #90d159;
+}
+
+
+
+.inbtn{
+    margin-right: 1vw;
+    background-color: #fee69c ! important;
+    color:#888 ! important;
+    font-size: x-small ! important;
+
+}
+
+.location{
+    margin-bottom: 30px;
+}
+
