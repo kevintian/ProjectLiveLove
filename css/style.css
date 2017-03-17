@@ -53,7 +53,6 @@ body {
 
 .intdiv{
     margin-right: 2vw;
-
 }
 
 #wrapper h4{
@@ -65,17 +64,16 @@ body {
     color: #90d159;
 }
 
-
-
 .inbtn{
     margin-right: 1vw;
     background-color: #fee69c ! important;
     color:#888 ! important;
     font-size: x-small ! important;
-
+    display:inline-block;
 }
 
 .location{
     margin-bottom: 30px;
 }
+
 
