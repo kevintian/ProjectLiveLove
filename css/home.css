@@ -44,8 +44,11 @@
 
 /*Adds a strip under the video for the buttons*/
 .strip{
-    border: 1px solid rgba(0,0,0,.12);
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
+
+
 
 /*Styling for buttons in the strip*/
 .buttonBar {
@@ -55,3 +58,12 @@
 .buttonBar > .btn-toolbar > button {
     font-weight: bolder;
 }
+
+/*.navbar-brand,*/
+/*.navbar-nav li a {*/
+    /*line-height: 70px;*/
+    /*height: 70px;*/
+    /*padding-top: 0;*/
+    /*font-size: 20px;*/
+    /*font-weight:bold;*/
+/*}*/
