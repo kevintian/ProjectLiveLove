@@ -5,44 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="description" content="Blueprint: Responsive Icon Grid" />
-    <meta name="keywords" content="icon grid, hover, responsive, portfolio, template" />
-    <meta name="author" content="Codrops" />
+    <meta name="description" content="Blueprint: Responsive Icon Grid"/>
+    <meta name="keywords" content="icon grid, hover, responsive, portfolio, template"/>
+    <meta name="author" content="Codrops"/>
 
     <title>MyLiveLove</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!--Our CSS-->
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="../favicon.ico">
-    <link rel="stylesheet" type="text/css" href="css/default.css" />
-    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="css/component.css"/>
 
 
 </head>
 
 <body>
-<nav class="navbar navbar-default navbar-static-top remove-bot-pad">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">My Live Love</a>
-        </div>
+<!--<nav class="navbar navbar-default navbar-static-top remove-bot-pad">-->
+    <!--<div class="container-fluid">-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"-->
+                    <!--aria-expanded="false" aria-controls="navbar">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">My Live Love</a>-->
+        <!--</div>-->
 
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Sign in</a></li>
-                <li><a href="#">Register</a></li>
-            </ul>
-        </div>
+        <!--<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">-->
+            <!--<ul class="nav navbar-nav navbar-right">-->
+                <!--<li><a href="#">Sign in</a></li>-->
+                <!--<li><a href="#">Register</a></li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">MyLiveLove</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Register</a>
+            </li>
+        </ul>
     </div>
 </nav>
 <!--Navbar end-->
@@ -52,74 +69,113 @@
 <section class="content-section video-section">
     <div class="pattern-overlay">
         <div class="imageOverlay"></div>
-
         <a id="bgndVideo" class="player"
            data-property="{videoURL:'https://www.youtube.com/watch?v=9sUu1LUC5cM',containment:'.video-section', quality:'highres', autoPlay:true, mute:true, opacity:1}">bg</a>
-        <!--<div class="container">-->
-        <!--<div class="row">-->
-        <!--<div class="col-lg-12">-->
-        <!--<h1>Full Width Video</h1>-->
-        <!--<h3>Enjoy Adding Full Screen Videos to your Page Sections</h3>-->
-        <!--</div>-->
-        <!--</div>-->
-        <!--</div>-->
     </div>
 </section>
 
-        <div class="main">
-                <ul class="cbp-ig-grid">
-                    <li>
-                        <a href="#">
-                            <span class="cbp-ig-icon cbp-ig-icon-shoe"></span>
-                            <h3 class="cbp-ig-title">Sports</h3>
-                            <span class="cbp-ig-category">Fashion</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="cbp-ig-icon cbp-ig-icon-ribbon"></span>
-                            <h3 class="cbp-ig-title">Mixtape lo-fi</h3>
-                            <span class="cbp-ig-category">Design</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="cbp-ig-icon cbp-ig-icon-milk"></span>
-                            <h3 class="cbp-ig-title">Outdoors</h3>
-                            <span class="cbp-ig-category">Lifestyle</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="cbp-ig-icon cbp-ig-icon-whippy"></span>
-                            <h3 class="cbp-ig-title">Food Donations</h3>
-                            <span class="cbp-ig-category">Food</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="cbp-ig-icon cbp-ig-icon-spectacles"></span>
-                            <h3 class="cbp-ig-title">Professional Events</h3>
-                            <span class="cbp-ig-category">Gadgets</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                            <h3 class="cbp-ig-title">Music&Arts</h3>
-                            <span class="cbp-ig-category">Music</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+<div class="text-center" style="margin-top: 30px">
+    <h1 style="font-weight: 900">Find Your Organization</h1>
+</div>
 
-<!--Video Section Ends Here-->
+<div class="container">
+    <div class="row align-items-center">
+        <div class=col-md-3>
+            <img class="img-fluid" src="http://www.duetsblog.com/uploads/image/intel_rgb_1700.png">
+        </div>
+        <div class=col-md-3>
+            <img class="img-fluid" src="http://www.abannervision.com/img/logos/disney.png">
+        </div>
+        <div class=col-md-3>
+            <img class="img-fluid"
+                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png">
+        </div>
+        <div class=col-md-3>
+            <img class="img-fluid"
+                 src="https://upload.wikimedia.org/wikipedia/en/thumb/b/b5/Boeing-Logo.svg/1280px-Boeing-Logo.svg.png">
+        </div>
+    </div>
+</div>
 
+<div class="text-center">
+    <h3 style="font-weight: 900">Don't see your organization? Search for more here!</h3>
+</div>
+
+<div class="text-center" style="margin-top: 100px">
+    <h1 style="font-weight: 900">Explore Volunteer Opportunities</h1>
+</div>
+
+<div class="container-fluid">
+
+    <ul class="cbp-ig-grid">
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-shoe"></span>
+                <h3 class="cbp-ig-title">Sports</h3>
+                <span class="cbp-ig-category">Fashion</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-ribbon"></span>
+                <h3 class="cbp-ig-title">Mixtape lo-fi</h3>
+                <span class="cbp-ig-category">Design</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-milk"></span>
+                <h3 class="cbp-ig-title">Outdoors</h3>
+                <span class="cbp-ig-category">Lifestyle</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-whippy"></span>
+                <h3 class="cbp-ig-title">Food Donations</h3>
+                <span class="cbp-ig-category">Food</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-spectacles"></span>
+                <h3 class="cbp-ig-title">Professional Events</h3>
+                <span class="cbp-ig-category">Gadgets</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+                <h3 class="cbp-ig-title">Music&Arts</h3>
+                <span class="cbp-ig-category">Music</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+                <h3 class="cbp-ig-title">Music&Arts</h3>
+                <span class="cbp-ig-category">Music</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+                <h3 class="cbp-ig-title">Music&Arts</h3>
+                <span class="cbp-ig-category">Music</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="container-fluid">
+
+</div>
 
 <!-- Bootstrap core JavaScript -->
 <!--We load jQuery before Boostrap-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 <script src="js/jquery.mb.YTPlayer.js"></script>
 <script src="js/home.js"></script>
 <script src="js/modernizr.custom.js"></script>
