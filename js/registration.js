@@ -22,6 +22,7 @@ $(function () {
             }
         });
     });
+
 });
 
 //when someone clicks register, take what they inputted and make it into an object that can be sent to the php server
