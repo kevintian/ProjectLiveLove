@@ -9,7 +9,8 @@
     <title>MyLiveLove</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
     <!--Our CSS-->
     <link rel="stylesheet" href="css/home.css">
@@ -20,18 +21,58 @@
 </head>
 
 <body>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<!--<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">-->
+<!--<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">-->
+<!--<span class="navbar-toggler-icon"></span>-->
+<!--</button>-->
+<!--<a class="navbar-brand mx-auto" href="#">MyLiveLove</a>-->
+<!--<div class="collapse navbar-collapse" id="navbarNav">-->
+<!--<ul class="nav navbar-nav ml-auto w-100 justify-content-end">-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="login.html">Login</a>-->
+<!--</li>-->
+<!--<li class="nav-item">-->
+<!--<a class="nav-link" href="registration.html">Register</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</nav>-->
+<nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse" style="background-color: #000000;">
+    <div class="navbar-collapse collapse">
+        <!--Hack to center navbar brand relatively-->
+    </div>
+    <a class="navbar-brand mx-auto font-bold" href="#">
+        <img src="img/mylivelovewhite.png" class = "d-inline-block align-middle" width="50" height="50" alt="">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
+            data-target="#mobileLogin">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">MyLiveLove</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+    <div id="windowsLogin" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
+            <!--<li class="nav-item">-->
+                <!--<form class="form-inline">-->
+                    <!--<button class="btn btn-bold-text btn-secondary" style="margin-right: 10px;" type="button">Login-->
+                    <!--</button>-->
+                    <!--<button class="btn btn-danger btn-bold-text" type="button">Sign up</button>-->
+                <!--</form>-->
+            <!--</li>-->
             <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="#">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="registration.html">Register</a>
+                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="mobileLogin" class="collapse">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
             </li>
         </ul>
     </div>
@@ -48,9 +89,9 @@
     </div>
 </section>
 
-<div class = "strip">
+<div class="strip">
     <div class="text-center" style="margin-top: 30px">
-        <h1 style="font-weight: 900">Find Your Organization</h1>
+        <h1 class="font-bold">Find Your Organization</h1>
     </div>
 
     <div class="container">
@@ -73,17 +114,17 @@
     </div>
 
     <div class="text-center">
-        <h3 style="font-weight: 900">Don't see your organization? Search for more here!</h3>
+        <h3 class="font-bold">Don't see your organization? Search for more here!</h3>
 
-        <form style ="margin: 30px">
+        <form style="margin: 30px">
             <input type="search" placeholder="What organization are you looking for?">
         </form>
     </div>
 </div>
 
-<div class = "red-strip">
+<div class="red-strip">
     <div class="text-center" style="padding: 30px;">
-        <h1 style="font-weight: 900">Explore Volunteer Opportunities</h1>
+        <h1 class="font-bold">Explore Volunteer Opportunities</h1>
     </div>
 
     <div class="container-fluid">
@@ -150,11 +191,12 @@
 </div>
 
 
-
 <!-- Bootstrap core JavaScript -->
 <!--We load jQuery before Boostrap-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 <script src="js/jquery.mb.YTPlayer.js"></script>
 <script src="js/home.js"></script>
 <script src="js/modernizr.custom.js"></script>

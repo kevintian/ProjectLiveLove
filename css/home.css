@@ -42,7 +42,7 @@
     width:100%;
     /*left:0;*/
     /*top:0;*/
-    background-image: url("../img/projectlivelove.png");
+    background-image: url("../img/projectlivelove_transparent.png");
     background-repeat: no-repeat;
     background-position: center;
 }
@@ -114,6 +114,20 @@ input::-webkit-input-placeholder {
 
 .red-strip {
     /*background: #be2026;*/
+}
+
+.navbar-drawer-expand {
+    padding: .7em 1em;
+}
+
+.font-bold {
+    font-weight: 900;
+}
+
+.mylivelove-font {
+    font-weight: 600;
+    font-size:20px;
+    text-transform: uppercase;
 }
 
 /*.navbar-brand,*/
