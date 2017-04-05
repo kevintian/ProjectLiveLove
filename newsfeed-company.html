@@ -9,33 +9,30 @@
     <title>Company Newsfeed</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/newsfeed-company.css">
 
 
 </head>
 <body>
 
-<nav class="navbar navbar-default navbar-static-top remove-bot-pad">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">My Live Love</a>
-        </div>
-
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="#">Sign in</a></li>
-                <li><a href="#">Register</a></li>
-            </ul>
-        </div>
+<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
+    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="#">MyLiveLove</a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="registration.html">Register</a>
+            </li>
+        </ul>
     </div>
 </nav>
 <!--Navbar end-->
@@ -47,16 +44,16 @@
             <div class="profile-sidebar">
                 <!-- SIDEBAR USERPIC -->
                 <div class="profile-userpic">
-                    <img src="http://keenthemes.com/preview/metronic/theme/assets/admin/pages/media/profile/profile_user.jpg" class="img-responsive" alt="">
+                    <img src="http://coolwildlife.com/wp-content/uploads/galleries/post-3004/Fox%20Picture%20003.jpg" class="img-fluid rounded mx-auto d-block" alt="">
                 </div>
                 <!-- END SIDEBAR USERPIC -->
                 <!-- SIDEBAR USER TITLE -->
                 <div class="profile-usertitle">
                     <div class="profile-usertitle-name">
-                        Marcus Doe
+                        Kevin Tian
                     </div>
                     <div class="profile-usertitle-job">
-                        Developer
+                        Volunteer
                     </div>
                 </div>
                 <!-- END SIDEBAR USER TITLE -->
@@ -68,23 +65,23 @@
                 <!-- END SIDEBAR BUTTONS -->
                 <!-- SIDEBAR MENU -->
                 <div class="profile-usermenu">
-                    <ul class="nav">
-                        <li class="active">
+                    <ul class="nav flex-column">
+                        <li class="nav-item active">
                             <a href="#">
-                                <i class="glyphicon glyphicon-home"></i>
+                                <i class="fa fa-home" aria-hidden="true"></i>
                                 Overview </a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#">
                                 <i class="glyphicon glyphicon-user"></i>
                                 Account Settings </a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#" target="_blank">
                                 <i class="glyphicon glyphicon-ok"></i>
                                 Tasks </a>
                         </li>
-                        <li>
+                        <li class="nav-item">
                             <a href="#">
                                 <i class="glyphicon glyphicon-flag"></i>
                                 Help </a>
