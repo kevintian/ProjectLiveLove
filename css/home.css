@@ -116,19 +116,19 @@ input::-webkit-input-placeholder {
     /*background: #be2026;*/
 }
 
-.navbar-drawer-expand {
-    padding: .7em 1em;
-}
+/*.navbar-drawer-expand {*/
+    /*padding: .7em 1em;*/
+/*}*/
 
-.font-bold {
-    font-weight: 900;
-}
+/*.font-bold {*/
+    /*font-weight: 900;*/
+/*}*/
 
-.mylivelove-font {
-    font-weight: 600;
-    font-size:20px;
-    text-transform: uppercase;
-}
+/*.mylivelove-font {*/
+    /*font-weight: 600;*/
+    /*font-size:20px;*/
+    /*text-transform: uppercase;*/
+/*}*/
 
 /*.navbar-brand,*/
 /*.navbar-nav li a {*/

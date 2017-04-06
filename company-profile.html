@@ -15,31 +15,48 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/company-profile.css">
+    <link rel="stylesheet" href="css/style.css">
+
 
 
 </head>
 <body>
-
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse bg-inverse">
+    <div class="navbar-collapse collapse">
+        <!--Hack to center navbar brand relatively-->
+    </div>
+    <a class="navbar-brand mx-auto font-bold" href="home.html">
+        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
+            data-target="#mobileLogin">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">MyLiveLove</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+    <div id="windowsLogin" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="company-profile.html">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="registration.html">Register</a>
+                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="mobileLogin" class="collapse">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
             </li>
         </ul>
     </div>
 </nav>
 <!--Navbar end-->
 
-<div class ="padding" style="padding-top: 50px;">
+<div class="padding" style="padding-top: 50px;">
 
 </div>
 
@@ -49,30 +66,53 @@
             <div class="card">
                 <div class="card-block">
                     <div align="center">
-                        <img class="img-thumbnail img-fluid" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png" width="300px" height="300px">
+                        <img class="img-thumbnail img-fluid" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
+                             width="300px" height="300px">
                         <div class="profile-info">
                             <h3 class="card-title">Company Name</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Organization</h6>
+                            <span class="badge badge-pill badge-info">2 Current Events</span>
                         </div>
                     </div>
                     <hr>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                    <div class="card-text">
+                        <h3>Bio</h3>
+                        Google was founded in 1996 by Larry Page and Sergey Brin while they were Ph.D. students at
+                        Stanford University, in California. Together, they own about 14 percent of its shares and
+                        control 56 percent of the stockholder voting power through supervoting stock. They incorporated
+                        Google as a privately held company on September 4, 1998. An initial public offering (IPO) took
+                        place on August 19, 2004, and Google moved to its new headquarters in Mountain View, California,
+                        nicknamed the Googleplex. In August 2015, Google announced plans to reorganize its various
+                        interests as a conglomerate called Alphabet Inc. Google, Alphabet's leading subsidiary, will
+                        continue to be the umbrella company for Alphabet's Internet interests. Upon completion of the
+                        restructure, Sundar Pichai became CEO of Google, replacing Larry Page, who became CEO of
+                        Alphabet.
+                    </div>
                 </div>
             </div>
 
         </div>
 
-        <div class = "col-lg-9 col-md-8 col-sm-12">
+        <div class="col-lg-9 col-md-8 col-sm-12">
             <div class="card">
-                <div class = "card-block">
+                <div class="card-block" style="padding-bottom: 0;">
                     <h4 class="card-title">Upcoming Events</h4>
-                    <!--<hr class="float-left" style="width:25%;">-->
+                    <hr>
+                    <div class="card event-listing">
+                        <div class="card-block">
+                            Event 1
+                        </div>
+                    </div>
+                    <div class="card event-listing">
+                        <div class="card-block">
+                            Event 2
+                        </div>
+                    </div>
                 </div>
             </div>
             <hr>
             <div class="card">
-                <div class = "card-block">
+                <div class="card-block">
                     <h4 class="card-title">Past Events</h4>
                     <hr>
                 </div>
