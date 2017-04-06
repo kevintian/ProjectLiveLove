@@ -29,27 +29,20 @@
         <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
     </a>
     <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
-            data-target="#mobileLogin">
+            data-target="#profileOptions">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div id="windowsLogin" class="navbar-collapse collapse">
+    <div id="profileOptions" class="navbar-collapse collapse">
         <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="company-profile.html">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="mobileLogin" class="collapse">
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Signup</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                </div>
             </li>
         </ul>
     </div>
@@ -100,12 +93,20 @@
                     <hr>
                     <div class="card event-listing">
                         <div class="card-block">
-                            Event 1
+                            <h4 class="card-title">Event 1</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
+                            <p class="card-text">Event description</p>
+                            <a href="#" class="btn btn-outline-success">Going</a>
+                            <a href="#" class="btn btn-outline-primary">Not Interested</a>
                         </div>
                     </div>
                     <div class="card event-listing">
                         <div class="card-block">
-                            Event 2
+                            <h4 class="card-title">Event 2</h4>
+                            <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
+                            <p class="card-text">Event description</p>
+                            <a href="#" class="btn btn-outline-success">Going</a>
+                            <a href="#" class="btn btn-outline-primary">Not Interested</a>
                         </div>
                     </div>
                 </div>
@@ -127,7 +128,9 @@
 <!-- Bootstrap core JavaScript -->
 <!--We load jQuery before Boostrap-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
 <!-- Placed at the end of the document so the pages load faster -->
 </body>
 </html>
