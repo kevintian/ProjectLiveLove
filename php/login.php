@@ -10,3 +10,9 @@ $DB_PASSWORD = '5nmkQRr3v3WqIerKsJqt';
 $DB_HOST = 'mylivelove.com';
 $DB_NAME = 'mylivelo_mylivelove';
 $dbc = new mysqli($DB_HOST, $DB_USER, $DB_PASSWORD, $DB_NAME);
+
+$firstname = $_POST["firstname"];
+$lastname = $_POST["lastname"];
+$username = $_POST["username"];
+$password = $_POST["password"];
+$email = $_POST["email"];
