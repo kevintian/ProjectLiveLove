@@ -7,81 +7,183 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>My Live Love Volunteer Opportunities</title>
+    <title>Register | My Live Love</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <link href="css/style.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" type="text/css" href="css/default.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+
+
+    <style>
+        .form-registration {
+            max-width: 350px;
+            margin: 0 auto;
+        }
+
+        .form-registration .form-control {
+            position: relative;
+            height: auto;
+            width: 350px;
+            padding: 10px;
+            font-size: 16px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #000;
+            font-size:20pt;
+            padding-top: 60px;
+            padding-bottom: 15px;
+        }
+
+        a {
+            color: #000;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #C11D1F;
+        }
+
+        .button {
+            background-color: #C11D1F;
+            border: none;
+            color: #ffffff;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            border-radius: 3px;
+            width: 350px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
+
 <body>
-<nav class="navbar navbar-default navbar-static-top">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                    aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
 
-            <!--Navbar-brand has a automatic css background of white, which broke your styling and caused the white rectangle.-->
-            <!--To fix this, we add the color directly into the html to make sure that it is more "specific" than the navbar-brand class.-->
-            <!--You can look up "css specificity" to learn more about this if you want.-->
-            <a class="navbar-brand" href="home.html" style="background: #90d159;">My Live Love</a>
-        </div>
-
-        <div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
-            <ul class="nav navbar-nav navbar-right">
-                <li><a class="btn homebutton btn-default" href="#">Sign in</a></li>
-                <li><a class="btn homebutton btn-default" href="#">Register</a></li>
-            </ul>
-        </div>
+<nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse bg-inverse">
+    <div class="navbar-collapse collapse">
+        <!--Hack to center navbar brand relatively-->
     </div>
+    <a class="navbar-brand mx-auto font-bold" href="home.html">
+        <img src="img/mylivelovewhite.png" class = "d-inline-block align-middle" width="50" height="50" alt="">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
+            data-target="#mobileLogin">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div id="windowsLogin" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
+
+            <li class="nav-item">
+                <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="company-profile.html">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
+            </li>
+        </ul>
+    </div>
+
+    <!--<div id="mobileLogin" class="collapse">-->
+        <!--<ul class="nav navbar-nav ml-auto">-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="#">Login</a>-->
+            <!--</li>-->
+            <!--<li class="nav-item">-->
+                <!--<a class="nav-link" href="#">Signup</a>-->
+            <!--</li>-->
+        <!--</ul>-->
+    <!--</div>-->
 </nav>
-
-<div class="container registerbox text-center">
-    <div id="wrapper" class="col-md-8 col-md-offset-2">
-        <div id="register" class="animate form">
-            <form class = "col-md-12">
-                <h2>Register For My Live Love</h2>
-                <div class="row form-group">
-                    <label for="firstname" class="fname"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="firstname" name="firstname" required="required" type="text" placeholder="first name" />
-                </div>
-                <div class="row form-group">
-                    <label for="lastname" class="lname"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="lastname" name="lastname" required="required" type="text" placeholder="last name" />
-                </div>
-                <div class="row form-group">
-                    <label for="usernamesu" class="uname"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="usernamesu" name="usernamesu" required="required" type="text" placeholder="username" />
-                </div>
-                <div class="row form-group">
-                    <label for="emailsu" class="email"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="emailsu" name="emailsu" required="required" type="text" placeholder="email" />
-                </div>
-                <div class="row form-group">
-                    <label for="passwordsu" class="pword"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="passwordsu" name="passwordsu" required="required" type="text" placeholder="password" />
-                </div>
-                <div class="row form-group">
-                    <label for="passwordsu_confirm" class="pword"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="passwordsu_confirm" name="passwordsu_confirm" required="required" type="text" placeholder="confirm password" />
-                </div>
-                <div class="row register-button form-group">
-                    <input class="regbtn btn btn-default col-md-2 col-md-offset-5" id = "registrationSubmit" type="submit" value="REGISTER"/>
-                </div>
+<!--Navbar end-->
 
 
-                <div class="row change_link form-group">
-                    <a href="#tologin">already have an account?</a>
-                </div>
-            </form>
-        </div>
+<div class = "container">
+    <h2 style="text-align:center" >Register For My Live Love</h2>
+
+    <form class = "form-registration" role = "form"
+          action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
+            ?>" method = "post">
+        <h4 class = "form-registration-heading"><?php echo $msg; ?></h4>
+        <input type = "text" class = "form-control"
+               id = "firstname" placeholder = "first name "
+               required autofocus>
+        <input type = "text" class = "form-control"
+               id = "lastname" placeholder = "last name " required>
+        <input type = "text" class = "form-control"
+               id = "username" placeholder = "username " required>
+        <input type = "text" class = "form-control"
+               id = "email" placeholder = "email address " required>
+        <input type = "text" class = "form-control"
+               id = "password" placeholder = "password " required>
+        <input type = "text" class = "form-control"
+               id = "confirm_password" placeholder = "confirm password " required><br>
+        <button class = "button" type = "submit"
+                id = "register">Register</button>
+    </form>
+
+    <div style="text-align:center" >
+        <a href="#tologin">Already have an account?</a>
     </div>
+
+
+
 </div>
+
+
+
+
+
+<!--<div class="container registerbox text-center">-->
+    <!--<div id="wrapper" class="col-md-8 col-md-offset-2">-->
+        <!--<div id="register" class="animate form">-->
+            <!--<form class = "col-md-12">-->
+                <!--<h2>Register For My Live Love</h2>-->
+                <!--<div class="row form-group">-->
+                    <!--<label for="firstname" class="fname"></label>-->
+                    <!--<input class="register-su input input-lg col-md-4 col-md-offset-4" id="firstname" name="firstname" required="required" type="text" placeholder="first name" />-->
+                <!--</div>-->
+                <!--<div class="row form-group">-->
+                    <!--<label for="lastname" class="lname"></label>-->
+                    <!--<input class="register-su input input-lg col-md-4 col-md-offset-4" id="lastname" name="lastname" required="required" type="text" placeholder="last name" />-->
+                <!--</div>-->
+                <!--<div class="row form-group">-->
+                    <!--<label for="usernamesu" class="uname"></label>-->
+                    <!--<input class="register-su input input-lg col-md-4 col-md-offset-4" id="usernamesu" name="usernamesu" required="required" type="text" placeholder="username" />-->
+                <!--</div>-->
+                <!--<div class="row form-group">-->
+                    <!--<label for="emailsu" class="email"></label>-->
+                    <!--<input class="register-su input input-lg col-md-4 col-md-offset-4" id="emailsu" name="emailsu" required="required" type="text" placeholder="email" />-->
+                <!--</div>-->
+                <!--<div class="row form-group">-->
+                    <!--<label for="passwordsu" class="pword"></label>-->
+                    <!--<input class="register-su input input-lg col-md-4 col-md-offset-4" id="passwordsu" name="passwordsu" required="required" type="text" placeholder="password" />-->
+                <!--</div>-->
+                <!--<div class="row form-group">-->
+                    <!--<label for="passwordsu_confirm" class="pword"></label>-->
+                    <!--<input class="register-su input input-lg col-md-4 col-md-offset-4" id="passwordsu_confirm" name="passwordsu_confirm" required="required" type="text" placeholder="confirm password" />-->
+                <!--</div>-->
+                <!--<div class="row register-button form-group">-->
+                    <!--<input class="regbtn btn btn-default col-md-2 col-md-offset-5" id = "registrationSubmit" type="submit" value="REGISTER"/>-->
+                <!--</div>-->
+
+
+                <!--<div class="row change_link form-group">-->
+                    <!--<a href="#tologin">already have an account?</a>-->
+                <!--</div>-->
+            <!--</form>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
 <script src= "js/jquery-2.2.4.min.js"></script>
 <script src= "js/registration.js"></script>
 </body>

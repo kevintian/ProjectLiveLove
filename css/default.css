@@ -93,6 +93,7 @@ a:hover {
 .container > header nav {
 	float: right;
 	text-align: center;
+	background: #47a3da;
 }
 
 .container > header nav a {
