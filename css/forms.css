@@ -1,0 +1,46 @@
+.form-registration, .form-signin {
+    max-width: 350px;
+    margin: 0 auto;
+}
+
+.form-registration .form-control, .form-signin .form-control {
+    position: relative;
+    height: auto;
+    width: 350px;
+    padding: 10px;
+    font-size: 16px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    text-align: center;
+    color: #000;
+    font-size: 20pt;
+    padding-top: 60px;
+    padding-bottom: 15px;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #C11D1F;
+}
+
+.button {
+    background-color: #C11D1F;
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 3px;
+    width: 350px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

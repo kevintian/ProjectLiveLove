@@ -1,14 +1,5 @@
-<?php
-   ob_start();
-   session_start();
-?>
-
-<?
-   // error_reporting(E_ALL);
-   // ini_set("display_errors", 1);
-?>
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
@@ -18,77 +9,25 @@
     <meta name="author" content="">
 
     <title>Log In | My Live Love</title>
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" type="text/css" href="css/default.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-    <!--<link href="narrow-jumbotron.css" rel="stylesheet">-->
+    <link rel="stylesheet" type="text/css" href="css/forms.css"/>
 
-    <style>
-        .form-signin {
-            max-width: 350px;
-            margin: 0 auto;
-        }
-
-        .form-signin .form-control {
-            position: relative;
-            height: auto;
-            width: 350px;
-            padding: 10px;
-            font-size: 16px;
-            margin-top: 5px;
-            margin-bottom: 5px;
-        }
-
-        h2 {
-            text-align: center;
-            color: #000;
-            font-size:20pt;
-            padding-top: 60px;
-            padding-bottom: 15px;
-        }
-
-        a {
-            color: #000;
-            text-decoration: none;
-        }
-
-        a:hover {
-            color: #C11D1F;
-        }
-
-        .button {
-            background-color: #C11D1F;
-            border: none;
-            color: #ffffff;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 3px;
-            width: 350px;
-            margin-top: 15px;
-            margin-bottom: 15px;
-        }
-    </style>
 
 
 </head>
 
 <body>
-
-
 <nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse bg-inverse">
     <div class="navbar-collapse collapse">
         <!--Hack to center navbar brand relatively-->
     </div>
     <a class="navbar-brand mx-auto font-bold" href="home.html">
-        <img src="img/mylivelovewhite.png" class = "d-inline-block align-middle" width="50" height="50" alt="">
+        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
     </a>
     <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
             data-target="#mobileLogin">
@@ -106,87 +45,32 @@
         </ul>
     </div>
 
-    <!--<div id="mobileLogin" class="collapse">-->
-    <!--<ul class="nav navbar-nav ml-auto">-->
-    <!--<li class="nav-item">-->
-    <!--<a class="nav-link" href="#">Login</a>-->
-    <!--</li>-->
-    <!--<li class="nav-item">-->
-    <!--<a class="nav-link" href="#">Signup</a>-->
-    <!--</li>-->
-    <!--</ul>-->
-    <!--</div>-->
+    <div id="mobileLogin" class="collapse">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
+            </li>
+        </ul>
+    </div>
 </nav>
 <!--Navbar end-->
 
+<div class="container">
+    <h2 style="text-align:center">Login</h2>
 
-
-
-
-<div class = "container form-signin">
-
-    <?php
-            $msg = '';
-
-            if (isset($_POST['login']) && !empty($_POST['username'])
-               && !empty($_POST['password'])) {
-
-               if ($_POST['username'] == 'test ' &&
-                  $_POST['password'] == 'test ') {
-                  $_SESSION['valid'] = true;
-                  $_SESSION['timeout'] = time();
-                  $_SESSION['username'] = 'test ';
-
-                  header("/ProjectLiveLove/main.index");
-               }else {
-                  $msg = 'Wrong username or password';
-               }
-            }
-         ?>
-</div> <!-- /container -->
-
-<!--<div class = "container">-->
-
-    <!--<h2>Log in to My Live Love</h2>-->
-
-    <!--<form class = "form-signin" role = "form"-->
-          <!--action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);-->
-            <!--?>" method = "post">-->
-        <!--&lt;!&ndash;<h4 class = "form-signin-heading"><?php echo $msg; ?></h4>&ndash;&gt;-->
-        <!--<input type = "text" class = "form-control"-->
-               <!--name = "username" placeholder = "username "-->
-               <!--required autofocus></br>-->
-        <!--<input type = "password" class = "form-control"-->
-               <!--name = "password" placeholder = "password " required>-->
-        <!--<button class = "button" type = "submit"-->
-                <!--name = "login">Login</button>-->
-    <!--</form>-->
-
-    <!--<div style="text-align:center">-->
-        <!--<a href="">Forgot password?</a>-->
-    <!--</div>-->
-
-
-
-<!--</div>-->
-
-
-
-<div class = "container">
-    <h2 style="text-align:center" >Register For My Live Love</h2>
-
-    <form class = "form-signin" role = "form"
-          action = "<?php echo htmlspecialchars($_SERVER['PHP_SELF']);
-            ?>" method = "post">
-        <h4 class = "form-signin-heading"><?php echo $msg; ?></h4>
-        <input type = "text" class = "form-control"
-               id = "username" placeholder = "username "
+    <form class="form-signin" role="form">
+        <h4 class="form-signin-heading"></h4>
+        <input type="text" class="form-control"
+               id="username" placeholder="username "
                required autofocus>
-        <input type = "text" class = "form-control"
-               id = "password" placeholder = "password " required>
-
-        <button class = "button" type = "submit"
-                id = "register">Register</button>
+        <input type="text" class="form-control"
+               id="password" placeholder="password " required>
+        <button class="button" type="submit"
+                id="login">Login
+        </button>
     </form>
 
     <div style="text-align:center">
@@ -194,11 +78,12 @@
     </div>
 
 
-
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+        crossorigin="anonymous"></script>
+<script src="js/login.js"></script>
 
-
-<script src= "js/jquery-2.2.4.min.js"></script>
-<script src= "js/login.js"></script>
 </body>
 </html>
