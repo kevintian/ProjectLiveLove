@@ -15,72 +15,81 @@
     <!--Our CSS-->
     <link rel="stylesheet" href="css/result.css">
     <link rel="stylesheet" href="css/style.css">
-
-
 </head>
 
 <body>
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse bg-inverse">
+    <div class="navbar-collapse collapse">
+        <!--Hack to center navbar brand relatively-->
+    </div>
+    <a class="navbar-brand mx-auto font-bold" href="home.html">
+        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
+    </a>
+    <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
+            data-target="#mobileLogin">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">MyLiveLove</a>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="nav navbar-nav ml-auto w-100 justify-content-end">
+    <div id="windowsLogin" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
             <li class="nav-item">
-                <a class="nav-link" href="login.html">Login</a>
+                <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="company-profile.html">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="registration.html">Register</a>
+                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="mobileLogin" class="collapse">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Login</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Signup</a>
             </li>
         </ul>
     </div>
 </nav>
 <!--Navbar end-->
 
-
-<div class="container">
-    <div class="card">
-        <!--<img class="card-img-bot"-->
-        <!--src="https://pbs.twimg.com/profile_images/655066410087940096/QSUlrrlm.png"-->
-        <!--alt="Card image cap">-->
-        <div class="card-block">
-            <div class="row">
-                <div class="col-lg-2">
-                    <img src="https://www.w3schools.com/css/trolltunga.jpg" class="img-fluid rounded mx-auto"
-                         alt="Responsive image">
-                </div>
-                <div class="col-lg-10">
-                    <h4 class="card-title">Event 1</h4>
-                    <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
-                    <p class="card-text">Event description</p>
-                    <a href="#" class="btn btn-outline-success">Going</a>
-                    <a href="#" class="btn btn-outline-primary">Not Interested</a>
-                </div>
+<!--Template for handlebars-->
+<script id="event-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="card-block">
+        <div class="row">
+            <div class="col-lg-2">
+                <img src="https://www.w3schools.com/css/trolltunga.jpg" class="img-fluid rounded mx-auto"
+                     alt="Responsive image">
+            </div>
+            <div class="col-lg-10">
+                <h4 class="card-title">{{Event_Name}}</h4>
+                <h6 class="card-subtitle mb-2 text-muted"> {{Organization_Name}} </h6>
+                <p class="card-text">{{Event_description}}</p>
+                <a href="#" class="btn btn-outline-success">Going</a>
+                <a href="#" class="btn btn-outline-primary">Not Interested</a>
             </div>
         </div>
     </div>
-    <!--<div class="card">-->
-    <!--<img style="float:left"-->
-    <!--src="https://www.sandiego.gov/sites/default/files/styles/100_percent/public/volunteer.jpg?itok=-dIRG-kt"-->
-    <!--width="200" height="130">-->
-    <!--<div class="content-heading"><h3> Company Name </h3></div>-->
-    <!--<p> Event Information: This is a great opportunity to daskjdkaldhsjdf</p>-->
+    {{/each}}
+</script>
 
-    <!--<button type="button" class="btn btn-default btn-md">-->
-    <!--<span class="glyphicon glyphicon-ok align right" aria-hidden="true"></span> Going-->
-    <!--</button>-->
-    <!--<button type="button" class="btn btn-default btn-md">-->
-    <!--<span class="glyphicon glyphicon-remove align right" aria-hidden="true"></span> Not Interested-->
-    <!--</button>-->
+<div class="container">
+    <div id = "result" class="card">
 
-    <!--</div>-->
+    </div>
 </div>
-</body>
 
+
+<!--Javascript-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+<script src="js/handlebars-v4.0.5.js"></script>
+<script src="js/result.js"></script>
+
+</body>
+
+
 </html>
