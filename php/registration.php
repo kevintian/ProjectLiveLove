@@ -24,29 +24,48 @@ $stmt->bind_param('s', $username);
 $stmt->execute();
 $response = $stmt->get_result();
 
-if ($response) {
-    echo "Hi! Connected";
+//check length of response to see if there's a match
+if ($response->num_rows == 0) {
+    //Hash the password
+    $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
+
+    $user_created = true;
+
+    //Insert into into database
+    $stmt = $dbc -> prepare('INSERT INTO accounts(username, password, email) VALUES(?,?,?)');
+    $stmt->bind_param('sss', $username, $hashed_pass, $email);
+
+    if (!$stmt->execute()) {
+        echo "here";
+        $user_created = false;
+    }
+
+    $stmt = $dbc -> prepare('INSERT INTO users VALUES(?,?,?,1)');
+    $stmt->bind_param('sss', $username, $firstname, $lastname);
+
+    if (!$stmt->execute()) {
+        $user_created = false;
+    }
+
+    if ($user_created) {
+        echo "Account created successfully!";
+    } else {
+        echo "An error occurred during account creation. If this issue persists, please contact the administrator.";
+    }
+
+//    $accountinsert = "INSERT INTO accounts ($username, $password, $email)";
+//    $userinsert = "INSERT INTO users ($username, $firstname, $lastname, 0";
+//    $accountresult = mysqli_query($dbc, $accountinsert);
+//    $userresult = mysqli_query($dbc, $userinsert);
+//
+//    if ($accountresult and $userresult) {
+//        echo "Registration complete!";
+//    }
+
 } else {
-    echo "Not connected.";
-    echo mysqli_error($dbc);
+    echo "User already exists!";
 }
 
-//check length of response to see if there's a match
-// if ($response->num_rows== 0){
-//     $accountinsert= "INSERT INTO accounts ($username, $password, $email)";
-//     $userinsert= "INSERT INTO users ($username, $firstname, $lastname, 0";
-//     $accountresult= mysqli_query($dbc, $accountinsert);
-//     $userresult= mysqli_query($dbc, $userinsert);
-
-//     if ($accountresult and $userresult){
-//         echo "Registration complete!";
-//     }
-
-// }
-
-// else{
-//     echo "User already exists!";
-// }
 
 
 ?> 
