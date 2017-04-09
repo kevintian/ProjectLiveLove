@@ -10,4 +10,13 @@ $(document).ready(function () {
         $('.imageOverlay').fadeOut('slow');
     });
 
+    var $input = $(".typeahead");
+    $input.typeahead({
+        source: [
+            "Test1", "Test2", "Test3"
+        ],
+        autoSelect: true
+    });
+
+
 });
