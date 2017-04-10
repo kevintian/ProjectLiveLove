@@ -16,3 +16,26 @@ $lastname = $_POST["lastname"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $email = $_POST["email"];
+
+if($_SERVER["REQUEST_METHOD"] == "POST") {
+    // username and password sent from form
+
+
+
+    $sql = "SELECT * FROM accounts WHERE username = '$username' and passcode = '$password'";
+    $result = mysqli_query($db,$sql);
+    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+    $active = $row['active'];
+
+    $count = mysqli_num_rows($result);
+
+    // If result matched $myusername and $mypassword, table row must be 1 row
+
+    if($count == 1) {
+        $_SESSION['login_user'] = $username;
+
+        header("location: newsfeed-volunteer.html");
+    }else {
+        $error = "Password is invalid";
+    }
+}
