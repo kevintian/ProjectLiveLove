@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     if($count == 1) {
         $_SESSION['login_user'] = $username;
 
-        header("location: newsfeed-volunteer.html");
+        header("location: user-profile.html");
     }else {
         $error = "Password is invalid";
     }

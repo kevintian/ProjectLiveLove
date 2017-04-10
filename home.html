@@ -10,14 +10,15 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS -->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">-->
 
     <!--Our CSS-->
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" type="text/css" href="css/default.css"/>
     <link rel="stylesheet" type="text/css" href="css/component.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
-
+    <link rel="stylesheet" type="text/css" href="css/home.css">
 
 
 </head>
@@ -28,7 +29,7 @@
         <!--Hack to center navbar brand relatively-->
     </div>
     <a class="navbar-brand mx-auto font-bold" href="home.html">
-        <img src="img/mylivelovewhite.png" class = "d-inline-block align-middle" width="50" height="50" alt="">
+        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
     </a>
     <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
             data-target="#mobileLogin">
@@ -95,78 +96,77 @@
     <div class="text-center">
         <h3 class="font-bold">Don't see your organization? Search for more here!</h3>
 
-        <form style="margin: 30px">
-            <input class = "typeahead" type="search" data-provide = "typeahead" placeholder="What organization are you looking for?">
-        </form>
+        <div style="margin: 30px">
+            <input id="search" class="typeahead" type="search" placeholder="What organization are you looking for?"
+                   autocomplete="off">
+        </div>
     </div>
 </div>
 
-<div class="red-strip">
-    <div class="text-center" style="padding: 30px;">
-        <h1 class="font-bold">Explore Volunteer Opportunities</h1>
-    </div>
+<div class="text-center" style="padding: 30px;">
+    <h1 class="font-bold">Explore Volunteer Opportunities</h1>
+</div>
 
-    <div class="container-fluid">
+<div class="container-fluid">
 
-        <ul class="cbp-ig-grid">
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-shoe"></span>
-                    <h3 class="cbp-ig-title">Sports</h3>
-                    <span class="cbp-ig-category">Fashion</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-ribbon"></span>
-                    <h3 class="cbp-ig-title">Mixtape lo-fi</h3>
-                    <span class="cbp-ig-category">Design</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-milk"></span>
-                    <h3 class="cbp-ig-title">Outdoors</h3>
-                    <span class="cbp-ig-category">Lifestyle</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-whippy"></span>
-                    <h3 class="cbp-ig-title">Food Donations</h3>
-                    <span class="cbp-ig-category">Food</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-spectacles"></span>
-                    <h3 class="cbp-ig-title">Professional Events</h3>
-                    <span class="cbp-ig-category">Gadgets</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                    <h3 class="cbp-ig-title">Music&Arts</h3>
-                    <span class="cbp-ig-category">Music</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                    <h3 class="cbp-ig-title">Music&Arts</h3>
-                    <span class="cbp-ig-category">Music</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                    <h3 class="cbp-ig-title">Music&Arts</h3>
-                    <span class="cbp-ig-category">Music</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+    <ul class="cbp-ig-grid">
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-shoe"></span>
+                <h3 class="cbp-ig-title">Sports</h3>
+                <span class="cbp-ig-category">Fashion</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-ribbon"></span>
+                <h3 class="cbp-ig-title">Mixtape lo-fi</h3>
+                <span class="cbp-ig-category">Design</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-milk"></span>
+                <h3 class="cbp-ig-title">Outdoors</h3>
+                <span class="cbp-ig-category">Lifestyle</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-whippy"></span>
+                <h3 class="cbp-ig-title">Food Donations</h3>
+                <span class="cbp-ig-category">Food</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-spectacles"></span>
+                <h3 class="cbp-ig-title">Professional Events</h3>
+                <span class="cbp-ig-category">Gadgets</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+                <h3 class="cbp-ig-title">Music&Arts</h3>
+                <span class="cbp-ig-category">Music</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+                <h3 class="cbp-ig-title">Music&Arts</h3>
+                <span class="cbp-ig-category">Music</span>
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
+                <h3 class="cbp-ig-title">Music&Arts</h3>
+                <span class="cbp-ig-category">Music</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 

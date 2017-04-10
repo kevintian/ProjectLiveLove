@@ -112,29 +112,8 @@ input::-webkit-input-placeholder {
     /*color: #999;*/
 }
 
-.red-strip {
-    /*background: #be2026;*/
+.active {
+    outline: 0;
+    text-decoration: none;
+    background-color: #f0f0f0;
 }
-
-/*.navbar-drawer-expand {*/
-    /*padding: .7em 1em;*/
-/*}*/
-
-/*.font-bold {*/
-    /*font-weight: 900;*/
-/*}*/
-
-/*.mylivelove-font {*/
-    /*font-weight: 600;*/
-    /*font-size:20px;*/
-    /*text-transform: uppercase;*/
-/*}*/
-
-/*.navbar-brand,*/
-/*.navbar-nav li a {*/
-    /*line-height: 70px;*/
-    /*height: 70px;*/
-    /*padding-top: 0;*/
-    /*font-size: 20px;*/
-    /*font-weight:bold;*/
-/*}*/
