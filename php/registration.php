@@ -36,7 +36,6 @@ if ($response->num_rows == 0) {
     $stmt->bind_param('sss', $username, $hashed_pass, $email);
 
     if (!$stmt->execute()) {
-        echo "here";
         $user_created = false;
     }
 
@@ -53,19 +52,15 @@ if ($response->num_rows == 0) {
         echo "An error occurred during account creation. If this issue persists, please contact the administrator.";
     }
 
-//    $accountinsert = "INSERT INTO accounts ($username, $password, $email)";
-//    $userinsert = "INSERT INTO users ($username, $firstname, $lastname, 0";
-//    $accountresult = mysqli_query($dbc, $accountinsert);
-//    $userresult = mysqli_query($dbc, $userinsert);
-//
-//    if ($accountresult and $userresult) {
-//        echo "Registration complete!";
-//    }
-
 } else {
     echo "User already exists!";
 }
 
+//Close prepared statement and result set
+$stmt -> close();
+$response -> close();
 
+//Close connection
+$dbc -> close();
 
 ?> 

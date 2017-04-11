@@ -1,24 +1,22 @@
 $(function () {
-    $("#registrationSubmit").click(function (e) {
+    $("#registrationForm").on('submit', function (e) {
         e.preventDefault();
         $.ajax({
             type: 'POST',
             url: '/ProjectLiveLove/php/registration.php', // use .. to "go up" (out of the folder)
             data: {
-                username: $("#usernamesu").val(), //hashtag means id, . means class
+                username: $("#username").val(), //hashtag means id, . means class
                 firstname: $("#firstname").val(),
                 lastname: $("#lastname").val(), //getting the values from what was inputted in the form
-                email: $("#emailsu").val(),
-                password: $("#passwordsu").val()
+                email: $("#email").val(),
+                password: $("#password").val()
             },
             success: function (data) {
                 alert(data);
-                console.log(data);
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);
                 alert(thrownError);
-                console.log(thrownError);
             }
         });
     });

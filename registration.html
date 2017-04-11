@@ -28,7 +28,7 @@
         <!--Hack to center navbar brand relatively-->
     </div>
     <a class="navbar-brand mx-auto font-bold" href="home.html">
-        <img src="img/mylivelovewhite.png" class = "d-inline-block align-middle" width="50" height="50" alt="">
+        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
     </a>
     <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
             data-target="#mobileLogin">
@@ -60,32 +60,33 @@
 <!--Navbar end-->
 
 
-<div class = "container">
+<div class="container">
     <h2 style="text-align:center">Register</h2>
 
-    <form class = "form-registration" role = "form">
-        <h4 class = "form-registration-heading"></h4>
-        <input type = "text" class = "form-control"
-               id = "firstname" placeholder = "first name "
+    <form id = "registrationForm" class="form-registration" role="form">
+        <h4 class="form-registration-heading"></h4>
+        <input type="text" class="form-control"
+               id="firstname" placeholder="first name "
                required autofocus>
-        <input type = "text" class = "form-control"
-               id = "lastname" placeholder = "last name " required>
-        <input type = "text" class = "form-control"
-               id = "username" placeholder = "username " required>
-        <input type = "text" class = "form-control"
-               id = "email" placeholder = "email address " required>
-        <input type = "text" class = "form-control"
-               id = "password" placeholder = "password " required>
-        <input type = "text" class = "form-control"
-               id = "confirm_password" placeholder = "confirm password " required><br>
-        <button class = "button" type = "submit"
-                id = "register">Register</button>
+        <input type="text" class="form-control"
+               id="lastname" placeholder="last name " required>
+        <input type="text" class="form-control"
+               id="username" placeholder="username " required>
+        <input type="text" class="form-control"
+               id="email" placeholder="email address " required>
+        <input type="password" class="form-control"
+               id="password" placeholder="password " required>
+        <input type="password" class="form-control"
+               id="confirm_password" placeholder="confirm password " required><br>
+
+        <button class="button" type="submit"
+                id="register">Register
+        </button>
     </form>
 
-    <div style="text-align:center" >
+    <div style="text-align:center">
         <a href="#tologin">Already have an account?</a>
     </div>
-
 
 
 </div>
@@ -93,6 +94,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script><script src= "js/registration.js"></script>
+        crossorigin="anonymous"></script>
+<script src="js/registration.js"></script>
 </body>
 </html>
