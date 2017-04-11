@@ -60,57 +60,62 @@
 </nav>
 <!--Navbar end-->
 
-<div class="container registerbox text-center">
-    <div id="wrapper" class="col-md-8 col-md-offset-2">
-        <div id="register" class="animate form">
-            <form class = "col-md-12">
-                <h2>Set Up Your Account</h2>
-                <div class="row form-group">
-                    <label for="phone" class="phone"></label>
-                    <input class="register-su input input-lg col-md-4 col-md-offset-4" id="phone" name="phone" required="required" type="text" placeholder="phone" />
-                </div>
-                <div class="row form-group">
-                    <label for="location" class="location"></label>
-                    <input class="register-su location input input-lg col-md-4 col-md-offset-4" id="location" name="location" required="required" type="text" placeholder="location" />
-                </div>
-                <h4>interests - select as many as necessary</h4>
-                <div class="col-md-10 col-md-offset-1">
-                    <div class="row interest-button form-group">
-                        <div class="intdiv col-md-1"></div>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="education"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="human rights"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="arts and culture"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="environment"/>
-                    </div>
-                    <div class="row register-button form-group">
-                        <div class="intdiv col-md-1"></div>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="animals"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="disaster relief"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="safety"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="faith-based"/>
-                    </div>
-                    <div class="row register-button form-group">
-                        <div class="intdiv col-md-1"></div>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="education"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="human rights"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="arts and culture"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="environment"/>
-                    </div>
-                    <div class="row register-button form-group">
-                        <div class="intdiv col-md-1"></div>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="animals"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="disaster relief"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="safety"/>
-                        <input class="inbtn btn btn-default col-md-2" type="submit" value="faith-based"/>
-                    </div>
-                </div>
-                <div class="row register-button form-group">
-                    <input class="regbtn btn btn-default col-md-2 col-md-offset-5" type="submit" value="FINISH"/>
-                </div>
 
-            </form>
+<div class="container">
+    <h2 style="text-align:center">Set Up Your Account</h2>
+
+    <form id = "registration2Form" class="form-registration" role="form">
+
+        <input type="text" class="form-control"
+               id="phone" placeholder="phone number"
+               required autofocus>
+        <input type="text" class="form-control"
+               id="location" placeholder="location " required>
+
+        <br>
+
+        <h4>Interests (Select all that apply)</h4>
+
+
+
+        <div class="col-md-10 col-md-offset-1">
+            <div class="row interest-button form-group">
+                <div class="intdiv col-md-1"></div>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="education"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="human rights"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="arts and culture"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="environment"/>
+            </div>
+            <div class="row register-button form-group">
+                <div class="intdiv col-md-1"></div>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="animals"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="disaster relief"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="safety"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="faith-based"/>
+            </div>
+            <div class="row register-button form-group">
+                <div class="intdiv col-md-1"></div>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="education"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="human rights"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="arts and culture"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="environment"/>
+            </div>
+            <div class="row register-button form-group">
+                <div class="intdiv col-md-1"></div>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="animals"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="disaster relief"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="safety"/>
+                <input class="inbtn btn btn-default col-md-2" type="submit" value="faith-based"/>
+            </div>
         </div>
-    </div>
+
+
+        <button class="button" type="submit"
+                id="finish">Finish
+        </button>
+    </form>
+
 </div>
+
 </body>
 </html>
