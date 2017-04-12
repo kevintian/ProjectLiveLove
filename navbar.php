@@ -10,32 +10,16 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-<?php if (isset($_SESSION['username']) && isset($_SESSION['user_type']) && $_SESSION['user_type'] == "USER") : ?>
+<?php if (isset($_SESSION['username']) && isset($_SESSION['user_type'])) : ?>
     <div id="profileOptions" class="navbar-collapse collapse">
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
+                    <?php echo $_SESSION['username']?>
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="user-profile.php">Edit Profile</a>
-                    <a class="dropdown-item" id = "logout" onclick="logout()" href="#">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-
-<?php elseif(isset($_SESSION['username']) && isset($_SESSION['user_type']) && $_SESSION['user_type'] == "COMPANY") : ?>
-    <div id="profileOptions" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="company-profile.php">Edit Profile</a>
+                    <a class="dropdown-item" href="<?php echo "profile.php?id=".$_SESSION['username']?>">Edit Profile</a>
                     <a class="dropdown-item" id = "logout" onclick="logout()" href="#">Logout</a>
                 </div>
             </li>

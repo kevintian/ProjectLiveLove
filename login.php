@@ -1,14 +1,9 @@
 <?php
 session_start();
 
-if(isset($_SESSION['username']) && isset($_SESSION['user_type'])) {
-    if($_SESSION['user_type'] == "USER") {
-        header("location: user-profile.php");
-        exit();
-    } else {
-        header("location: company-profile.php");
-        exit();
-    }
+if (isset($_SESSION['username']) && isset($_SESSION['user_type'])) {
+    header("location: profile.php?id=" . $_SESSION['username']);
+    exit();
 }
 ?>
 
@@ -42,7 +37,7 @@ require 'navbar.php';
 <div class="container">
     <h2 style="text-align:center">Login</h2>
 
-    <form id = "loginForm" class="form-signin" role="form">
+    <form id="loginForm" class="form-signin" role="form">
         <h4 class="form-signin-heading"></h4>
         <input type="text" class="form-control"
                id="username" placeholder="username "

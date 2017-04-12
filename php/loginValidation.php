@@ -18,18 +18,14 @@ $response = $stmt->get_result();
 //If the user exists
 if ($response->num_rows != 0) {
     //Get the users hashed password
-    $stmt = $dbc->prepare('SELECT password, accountType FROM accounts WHERE username = ?');
-    $stmt->bind_param('s', $username);
-    $stmt->execute();
-
-    $response = $stmt->get_result();
     $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an associative array
 
     $hashedPass = $row["password"];
     if (password_verify($password, $hashedPass)) {
         $_SESSION['username'] = $username;
         $_SESSION['user_type'] = $row["accountType"];
-        echo $_SESSION['user_type'];
+        $userInfo = array("user_type" => $_SESSION['user_type'], "username" => $username);
+        echo json_encode($userInfo);
 
     } else {
         echo "Incorrect Password";

@@ -1,34 +1,3 @@
-<?php
-session_start();
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <title>Company Newsfeed</title>
-
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
-          integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/company-profile.css">
-    <link rel="stylesheet" href="css/style.css">
-
-
-</head>
-<body>
-<?php
-require 'navbar.php';
-?>
-<!--Navbar end-->
-
 <div class="padding" style="padding-top: 50px;">
 
 </div>
@@ -209,14 +178,3 @@ require 'navbar.php';
 <br>
 <br>
 
-<!-- Bootstrap core JavaScript -->
-<!--We load jQuery before Boostrap-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
-        integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
-        crossorigin="anonymous"></script>
-<script src="js/logout.js"></script>
-
-<!-- Placed at the end of the document so the pages load faster -->
-</body>
-</html>
