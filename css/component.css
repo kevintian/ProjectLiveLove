@@ -2,9 +2,9 @@
 	font-family: 'anyoldicon';
 	src:url('../fonts/anyoldicon/anyoldicon.eot');
 	src:url('../fonts/anyoldicon/anyoldicon.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/anyoldicon/anyoldicon.woff') format('woff'),
-		url('../fonts/anyoldicon/anyoldicon.ttf') format('truetype'),
-		url('../fonts/anyoldicon/anyoldicon.svg#anyoldicon') format('svg');
+	url('../fonts/anyoldicon/anyoldicon.woff') format('woff'),
+	url('../fonts/anyoldicon/anyoldicon.ttf') format('truetype'),
+	url('../fonts/anyoldicon/anyoldicon.svg#anyoldicon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -17,14 +17,14 @@
 }
 
 /* Clear floats */
-.cbp-ig-grid:before, 
-.cbp-ig-grid:after { 
-	content: " "; 
-	display: table; 
+.cbp-ig-grid:before,
+.cbp-ig-grid:after {
+	content: " ";
+	display: table;
 }
 
-.cbp-ig-grid:after { 
-	clear: both; 
+.cbp-ig-grid:after {
+	clear: both;
 }
 
 /* grid item */
@@ -208,7 +208,7 @@
 	}
 }
 
-@media screen and (max-width: 41.6em) { 
+@media screen and (max-width: 41.6em) {
 	.cbp-ig-grid li {
 		width: 100%;
 	}
@@ -226,7 +226,7 @@
 	}
 }
 
-@media screen and (max-width: 25em) { 
+@media screen and (max-width: 25em) {
 	.cbp-ig-grid {
 		font-size: 80%;
 	}

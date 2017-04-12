@@ -87,57 +87,43 @@ require 'navbar.php';
             <li>
                 <a href="#">
                     <span class="cbp-ig-icon cbp-ig-icon-shoe"></span>
-                    <h3 class="cbp-ig-title">Sports</h3>
-                    <span class="cbp-ig-category">Fashion</span>
+                    <h3 class="cbp-ig-title">poverty & relief</h3>
+                    <span class="cbp-ig-category">homeless, hungry, poor, disaster relief</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span class="cbp-ig-icon cbp-ig-icon-ribbon"></span>
-                    <h3 class="cbp-ig-title">Mixtape lo-fi</h3>
-                    <span class="cbp-ig-category">Design</span>
+                    <h3 class="cbp-ig-title">health services</h3>
+                    <span class="cbp-ig-category">clinics, cancer, addiction, crisis, pregnancy, suicide, mental health, diabetes, disability</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span class="cbp-ig-icon cbp-ig-icon-milk"></span>
-                    <h3 class="cbp-ig-title">Outdoors</h3>
-                    <span class="cbp-ig-category">Lifestyle</span>
+                    <h3 class="cbp-ig-title">community building</h3>
+                    <span class="cbp-ig-category">arts, parenting, ged, trade training, renovation, construction, education</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span class="cbp-ig-icon cbp-ig-icon-whippy"></span>
-                    <h3 class="cbp-ig-title">Food Donations</h3>
-                    <span class="cbp-ig-category">Food</span>
+                    <h3 class="cbp-ig-title">social justice</h3>
+                    <span class="cbp-ig-category">child abuse, inequality, violence, voting, sex trafficking</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span class="cbp-ig-icon cbp-ig-icon-spectacles"></span>
-                    <h3 class="cbp-ig-title">Professional Events</h3>
-                    <span class="cbp-ig-category">Gadgets</span>
+                    <h3 class="cbp-ig-title">environmentalism</h3>
+                    <span class="cbp-ig-category">energy conservation, recycling, pollution</span>
                 </a>
             </li>
             <li>
                 <a href="#">
                     <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                    <h3 class="cbp-ig-title">Music&Arts</h3>
-                    <span class="cbp-ig-category">Music</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                    <h3 class="cbp-ig-title">Music&Arts</h3>
-                    <span class="cbp-ig-category">Music</span>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <span class="cbp-ig-icon cbp-ig-icon-doumbek"></span>
-                    <h3 class="cbp-ig-title">Music&Arts</h3>
-                    <span class="cbp-ig-category">Music</span>
+                    <h3 class="cbp-ig-title">other opportunities</h3>
+                    <span class="cbp-ig-category">other opportunities</span>
                 </a>
             </li>
         </ul>
