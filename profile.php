@@ -61,6 +61,13 @@ if (array_key_exists('id', $query)) {
         echo '404 User Not Found';
     }
 
+    //Close prepared statement and result set
+    $stmt->close();
+    $response->close();
+
+    //Close connection
+    $dbc->close();
+
 } else {
     echo 'Error - No Profile specified';
 }

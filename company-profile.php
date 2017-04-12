@@ -49,9 +49,12 @@
                         <div class="col-lg-6 col-md-6">
                             <h4 class="card-title">Upcoming Events</h4>
                         </div>
+                        <?php if ($_SESSION['username'] == $query["id"]) : //we get query["id"] from profile.php ?>
+<!--                            Only show this if the user is viewing their own page-->
                         <div class="col-lg-6 col-md-6 text-right my-auto">
-                            <button class="btn btn-info" data-toggle="modal" data-target="#createEventModal">Add new event</button>
+                            <button class="btn btn-info" data-toggle="modal" data-target="#createEventModal">Add a new event</button>
                         </div>
+                        <?php endif; ?>
                     </div>
                     <hr>
                     <div class="card event-listing">
@@ -112,63 +115,27 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group row">
-                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            <label for="eventName" class="col-sm-3 col-form-label">Event Name:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="eventName" placeholder="Event Name">
                             </div>
                         </div>
+
                         <div class="form-group row">
-                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            <label for="eventAddress" class="col-sm-3 col-form-label">Address:</label>
+                            <div class="col-sm-9">
+                                <input type="text" class="form-control" id="eventName" placeholder="Event Address">
                             </div>
                         </div>
-                        <fieldset class="form-group row">
-                            <legend class="col-form-legend col-sm-2">Radios</legend>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                               value="option1" checked>
-                                        Option one is this and that&mdash;be sure to include why it's great
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                               value="option2">
-                                        Option two can be something else and selecting it will deselect option one
-                                    </label>
-                                </div>
-                                <div class="form-check disabled">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
-                                               value="option3" disabled>
-                                        Option three is disabled
-                                    </label>
-                                </div>
-                            </div>
-                        </fieldset>
-                        <div class="form-group row">
-                            <label class="col-sm-2">Checkbox</label>
-                            <div class="col-sm-10">
-                                <div class="form-check">
-                                    <label class="form-check-label">
-                                        <input class="form-check-input" type="checkbox"> Check me out
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <div class="offset-sm-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Sign in</button>
-                            </div>
+
+                        <div class="form-group">
+                            <label for="exampleTextarea">Event Description</label>
+                            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Please enter a short description of your event"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-primary">Create Event</button>
                 </div>
             </div>
         </div>
