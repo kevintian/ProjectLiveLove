@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,33 +24,9 @@
 
 </head>
 <body>
-<nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse bg-inverse">
-    <div class="navbar-collapse collapse">
-        <!--Hack to center navbar brand relatively-->
-    </div>
-    <a class="navbar-brand mx-auto font-bold" href="home.php">
-        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
-    </a>
-    <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
-            data-target="#profileOptions">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div id="profileOptions" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="user-profile.html">Edit Profile</a>
-                    <a class="dropdown-item" href="#">Logout</a>
-                </div>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php
+require 'navbar.php';
+?>
 <!--Navbar end-->
 
 <div class="padding" style="padding-top: 50px;">
@@ -62,9 +42,9 @@
                         <img class="img-thumbnail img-fluid" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
                              width="300px" height="300px">
                         <div class="profile-info">
-                            <h3 class="card-title">Kevin Tian</h3>
-                            <h6 class="card-subtitle mb-2 text-muted">Volunteer</h6>
-                            <span class="badge badge-pill badge-info">3412 Points</span>
+                            <h3 class="card-title">Company Name</h3>
+                            <h6 class="card-subtitle mb-2 text-muted">Organization</h6>
+                            <span class="badge badge-pill badge-info">2 Current Events</span>
                         </div>
                     </div>
                     <hr>
@@ -101,19 +81,18 @@
                             <h4 class="card-title">Upcoming Events</h4>
                         </div>
                         <div class="col-lg-6 col-md-6 text-right my-auto">
-                            <a class="btn btn-info" href="#">Add new event</a>
+                            <button class="btn btn-info" data-toggle="modal" data-target="#createEventModal">Add new event</button>
                         </div>
                     </div>
                     <hr>
                     <div class="card event-listing">
                         <div class="card-block">
                             <div class="row">
-                                <div class="col-lg-2">
-                                    <img src="https://www.w3schools.com/css/trolltunga.jpg" style='width:175px; height:150px; padding-right:0px;'
-                                         class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-                                </div>
-                                <div class="col-lg-10">
-                                    <h4 class="card-title">Event 1</h4>
+                                <div class="col-lg-12">
+                                    <div class="img float-left"
+                                         style="background-image: url('http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'); margin-right:15px;">
+                                    </div>
+                                    <h4 class="card-title">Event 2</h4>
                                     <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
                                     <p class="card-text">Event description</p>
                                     <a href="#" class="btn btn-outline-success">Going</a>
@@ -125,11 +104,10 @@
                     <div class="card event-listing">
                         <div class="card-block">
                             <div class="row">
-                                <div class="col-lg-2">
-                                    <img src="https://www.w3schools.com/css/trolltunga.jpg" style='width:175px; height:150px; padding-right:0px;'
-                                         class="img-fluid rounded mx-auto d-block" alt="Responsive image">
-                                </div>
-                                <div class="col-lg-10">
+                                <div class="col-lg-12">
+                                    <div class="img float-left"
+                                         style="background-image: url('http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'); margin-right:15px;">
+                                    </div>
                                     <h4 class="card-title">Event 2</h4>
                                     <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
                                     <p class="card-text">Event description</p>
@@ -150,6 +128,82 @@
             </div>
         </div>
     </div>
+
+
+    <!-- Create Event Modal -->
+    <div class="modal fade" id="createEventModal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create an event</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group row">
+                            <label for="inputEmail3" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label for="inputPassword3" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                            </div>
+                        </div>
+                        <fieldset class="form-group row">
+                            <legend class="col-form-legend col-sm-2">Radios</legend>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
+                                               value="option1" checked>
+                                        Option one is this and that&mdash;be sure to include why it's great
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
+                                               value="option2">
+                                        Option two can be something else and selecting it will deselect option one
+                                    </label>
+                                </div>
+                                <div class="form-check disabled">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3"
+                                               value="option3" disabled>
+                                        Option three is disabled
+                                    </label>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <div class="form-group row">
+                            <label class="col-sm-2">Checkbox</label>
+                            <div class="col-sm-10">
+                                <div class="form-check">
+                                    <label class="form-check-label">
+                                        <input class="form-check-input" type="checkbox"> Check me out
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="offset-sm-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Sign in</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <br>
@@ -161,6 +215,8 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
         integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
         crossorigin="anonymous"></script>
+<script src="js/logout.js"></script>
+
 <!-- Placed at the end of the document so the pages load faster -->
 </body>
 </html>

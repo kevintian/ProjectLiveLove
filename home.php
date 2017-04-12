@@ -158,6 +158,7 @@ require 'navbar.php';
 <script src="js/bootstrap3-typeahead.min.js"></script>
 <script src="js/home.js"></script>
 <script src="js/modernizr.custom.js"></script>
+<script src="js/logout.js"></script>
 
 
 <!-- Placed at the end of the document so the pages load faster -->

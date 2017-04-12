@@ -10,7 +10,7 @@
         <span class="navbar-toggler-icon"></span>
     </button>
 
-<?php if (isset($_SESSION['username']) && isset($_SESSION['user_type'])) : ?>
+<?php if (isset($_SESSION['username']) && isset($_SESSION['user_type']) && $_SESSION['user_type'] == "USER") : ?>
     <div id="profileOptions" class="navbar-collapse collapse">
         <ul class="nav navbar-nav ml-auto">
             <li class="nav-item dropdown">
@@ -19,12 +19,29 @@
                     Dropdown link
                 </a>
                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="user-profile.html">Edit Profile</a>
-                    <a class="dropdown-item" href="#">Logout</a>
+                    <a class="dropdown-item" href="user-profile.php">Edit Profile</a>
+                    <a class="dropdown-item" id = "logout" onclick="logout()" href="#">Logout</a>
                 </div>
             </li>
         </ul>
     </div>
+
+<?php elseif(isset($_SESSION['username']) && isset($_SESSION['user_type']) && $_SESSION['user_type'] == "COMPANY") : ?>
+    <div id="profileOptions" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                   data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown link
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                    <a class="dropdown-item" href="company-profile.php">Edit Profile</a>
+                    <a class="dropdown-item" id = "logout" onclick="logout()" href="#">Logout</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
 <?php else : ?>
     <div id="windowsLogin" class="navbar-collapse collapse">
         <ul class="nav navbar-nav ml-auto">
@@ -33,7 +50,7 @@
                 <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="login.php">Login</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
+                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="registration.html">Sign up</a>
             </li>
         </ul>
     </div>
