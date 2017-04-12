@@ -37,7 +37,7 @@ if ($response->num_rows == 0) {
         $user_created = false;
     }
 
-    $stmt = $dbc -> prepare('INSERT INTO users VALUES(?,?,?,1)');
+    $stmt = $dbc -> prepare('INSERT INTO users(username, firstName, lastName, points) VALUES(?,?,?,1)');
     $stmt->bind_param('sss', $username, $firstname, $lastname);
 
     if (!$stmt->execute()) {
