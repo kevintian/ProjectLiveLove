@@ -29,7 +29,11 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                                 <?php echo htmlspecialchars($row['companyName']); ?>
                             </h3>
                             <h6 class="card-subtitle mb-2 text-muted">Organization</h6>
-                            <span class="badge badge-pill badge-info">3 Current Events</span>
+                            <span class="badge badge-info">3 Current Events</span>
+                            <div style="padding-top: 5px;">
+                                <span class="badge badge-pill badge-info">Poverty & Relief</span>
+                                <span class="badge badge-pill badge-success">Environmentalism</span>
+                            </div>
                         </div>
                     </div>
                     <hr>
