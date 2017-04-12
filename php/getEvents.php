@@ -1,10 +1,22 @@
 <?php
-/**
- * Created by IntelliJ IDEA.
- * User: kevin
- * Date: 4/11/2017
- * Time: 11:34 PM
- */
+$arr = array(
+    array(
+        "Event_Name" => "Volunteer Opportunity 1",
+        "Organization_Name" => "Animal Shelter",
+        "Event_description" => "Event description"
 
-require 'dbConnection.php';
+    ),
+    array(
+        "Event_Name" => "Volunteer Opportunity 2",
+        "Organization_Name" => "Animal Shelter",
+        "Event_description" => "Event description"
+    ),
+    array(
+        "Event_Name" => "Volunteer Opportunity 3",
+        "Organization_Name" => "Animal Shelter",
+        "Event_description" => "Event description"
+    )
+);
 
+echo json_encode($arr);
+?>

@@ -7,17 +7,17 @@ $(function () {
 
 var data = [
     {
-        Event_Name: "volunteer opportunity 1",
+        Event_Name: "Volunteer Organization 1",
         Organization_Name: "Animal Shelter",
         Event_description: "this is an opportunity to..."
     },
     {
-        Event_Name: "volunteer opportunity 2",
+        Event_Name: "Volunteer Organization 1",
         Organization_Name: "Animal Shelter",
         Event_description: "this is an opportunity to..."
     },
     {
-        Event_Name: "volunteer opportunity 3",
+        Event_Name: "Volunteer Organization 1",
         Organization_Name: "Animal Shelter",
         Event_description: "this is an opportunity to..."
     }

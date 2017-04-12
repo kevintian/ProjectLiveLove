@@ -22,14 +22,14 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
             <div class="card">
                 <div class="card-block">
                     <div align="center">
-                        <img class="img-thumbnail img-fluid" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
+                        <img class="img-thumbnail img-fluid" src="img/profileFiller.png"
                              width="300px" height="300px">
                         <div class="profile-info">
                             <h3 class="card-title">
                                 <?php echo htmlspecialchars($row['companyName']); ?>
                             </h3>
                             <h6 class="card-subtitle mb-2 text-muted">Organization</h6>
-                            <span class="badge badge-info">3 Current Events</span>
+                            <span class="badge badge-danger">3 Current Events</span>
                             <div style="padding-top: 5px;">
                                 <span class="badge badge-pill badge-info">Poverty & Relief</span>
                                 <span class="badge badge-pill badge-success">Environmentalism</span>
@@ -42,12 +42,15 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                             <div class="col-lg-6 col-md-6">
                                 <h3>Bio</h3>
                             </div>
-                            <div class="col-lg-6 col-md-6 text-right my-auto">
-                                <a id="editProfile" href="#">Edit</a>
-                            </div>
+                            <?php if (isset($_SESSION['username']) && ($_SESSION['username'] == $query["id"])) : //we get query["id"] from profile.php ?>
+                                <!--                            Only show this if the user is viewing their own page-->
+                                <div class="col-lg-6 col-md-6 text-right my-auto">
+                                    <a id="editProfile" href="#">Edit</a>
+                                </div>
+                            <?php endif; ?>
                         </div>
                         <?php
-                            echo htmlspecialchars($row['companyDescription'])
+                        echo htmlspecialchars($row['companyDescription'])
                         ?>
                     </div>
                 </div>
@@ -63,15 +66,17 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                             <h4 class="card-title">Upcoming Events</h4>
                         </div>
                         <?php if (isset($_SESSION['username']) && ($_SESSION['username'] == $query["id"])) : //we get query["id"] from profile.php ?>
-<!--                            Only show this if the user is viewing their own page-->
-                        <div class="col-lg-6 col-md-6 text-right my-auto">
-                            <button class="btn btn-info" data-toggle="modal" data-target="#createEventModal">Add a new event</button>
-                        </div>
+                            <!--                            Only show this if the user is viewing their own page-->
+                            <div class="col-lg-6 col-md-6 text-right my-auto">
+                                <button class="btn btn-info" data-toggle="modal" data-target="#createEventModal">Add a
+                                    new event
+                                </button>
+                            </div>
                         <?php endif; ?>
                     </div>
                     <hr>
-                    <div id = "result">
-<!--                        Handlebars will populate this with events. Template is below-->
+                    <div id="result">
+                        <!--                        Handlebars will populate this with events. Template is below-->
                     </div>
                 </div>
             </div>
@@ -98,8 +103,21 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                         <h4 class="card-title">{{Event_Name}}</h4>
                         <h6 class="card-subtitle mb-2 text-muted">{{Organization_Name}}</h6>
                         <p class="card-text">{{Event_description}}</p>
-                        <a href="#" class="btn btn-outline-success">Going</a>
-                        <a href="#" class="btn btn-outline-primary">Not Interested</a>
+                        <?php if (isset($_SESSION['username']) && ($_SESSION['username'] == $query["id"])) : //we get query["id"] from profile.php ?>
+                            <button class = "btn btn-outline-primary" id = "viewVolunteers">View Volunteers</button>
+                            <button class = "btn btn-secondary" id = "editEvent">Edit Event</button>
+                        <?php else : ?>
+                            <div data-toggle="buttons">
+                                <label class="btn btn-outline-success">
+                                    <input type="radio" name="going" id="going" autocomplete="off"> Going
+                                </label>
+                                <label class="btn btn-outline-primary">
+                                    <input type="radio" name="notInterested" id="notInterested" autocomplete="off"> Not
+                                    Interested
+                                </label>
+                            </div>
+                        <?php endif; ?>
+
                     </div>
                 </div>
             </div>
@@ -136,7 +154,8 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
 
                         <div class="form-group">
                             <label for="exampleTextarea">Event Description</label>
-                            <textarea class="form-control" id="exampleTextarea" rows="3" placeholder="Please enter a short description of your event"></textarea>
+                            <textarea class="form-control" id="exampleTextarea" rows="3"
+                                      placeholder="Please enter a short description of your event"></textarea>
                         </div>
                     </form>
                 </div>

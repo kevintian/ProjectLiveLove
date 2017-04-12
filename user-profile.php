@@ -23,7 +23,7 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
             <div class="card">
                 <div class="card-block">
                     <div align="center">
-                        <img class="img-thumbnail img-fluid" src="https://lut.im/7JCpw12uUT/mY0Mb78SvSIcjvkf.png"
+                        <img class="img-thumbnail img-fluid" src="img/profileFiller.png"
                              width="300px" height="300px">
                         <div class="profile-info">
                             <h3 class="card-title">
@@ -93,8 +93,14 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                         <h4 class="card-title">{{Event_Name}}</h4>
                         <h6 class="card-subtitle mb-2 text-muted">{{Organization_Name}}</h6>
                         <p class="card-text">{{Event_description}}</p>
-                        <a href="#" class="btn btn-outline-success">Going</a>
-                        <a href="#" class="btn btn-outline-primary">Not Interested</a>
+                        <div data-toggle="buttons">
+                            <label class="btn btn-outline-success active">
+                                <input type="radio" name="going" id="going" autocomplete="off" checked> Going
+                            </label>
+                            <label class="btn btn-outline-primary">
+                                <input type="radio" name="notInterested" id="notInterested" autocomplete="off"> Not Interested
+                            </label>
+                        </div>
                     </div>
                 </div>
             </div>
