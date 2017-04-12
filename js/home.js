@@ -23,7 +23,7 @@ $(document).ready(function () {
     // catch enter code in search form in front page
     $('#search').keyup(function (e) {
         var str = $('#search').val();
-        var url = "result.html?search=" + str;
+        var url = "result.php?search=" + str;
         if (e.keyCode == 13) {
             $(location).attr('href', url);
         }

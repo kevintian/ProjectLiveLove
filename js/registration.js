@@ -9,7 +9,8 @@ $(function () {
                 firstname: $("#firstname").val(),
                 lastname: $("#lastname").val(), //getting the values from what was inputted in the form
                 email: $("#email").val(),
-                password: $("#password").val()
+                password: $("#password").val(),
+                accountType: "USER"
             },
             success: function (data) {
                 alert(data);

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,39 +21,9 @@
 </head>
 
 <body>
-<nav id="topNav" class="navbar static-top navbar-toggleable-sm navbar-inverse bg-inverse">
-    <div class="navbar-collapse collapse">
-        <!--Hack to center navbar brand relatively-->
-    </div>
-    <a class="navbar-brand mx-auto font-bold" href="home.html">
-        <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
-    </a>
-    <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
-            data-target="#mobileLogin">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div id="windowsLogin" class="navbar-collapse collapse">
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link mylivelove-font" style="color:whitesmoke;" href="company-profile.html">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link mylivelove-font" style="color:#C11D1F;" href="#">Sign up</a>
-            </li>
-        </ul>
-    </div>
-
-    <div id="mobileLogin" class="collapse">
-        <ul class="nav navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Login</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Signup</a>
-            </li>
-        </ul>
-    </div>
-</nav>
+<?php
+require 'navbar.php';
+?>
 <!--Navbar end-->
 
 <!--Template for handlebars-->
