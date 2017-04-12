@@ -38,7 +38,7 @@ require 'navbar.php';
     <div class="pattern-overlay">
         <div class="imageOverlay"></div>
         <a id="bgndVideo" class="player"
-           data-property="{videoURL:'https://www.youtube.com/watch?v=9sUu1LUC5cM',containment:'.video-section', quality:'highres', autoPlay:true, mute:true, opacity:1}">bg</a>
+           data-property="{videoURL:'https://www.youtube.com/watch?v=9sUu1LUC5cM',containment:'.video-section', quality:'hd1080', autoPlay:true, mute:true, opacity:1}">bg</a>
     </div>
 </section>
 
