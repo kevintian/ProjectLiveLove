@@ -58,7 +58,7 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                         <div class="col-lg-6 col-md-6">
                             <h4 class="card-title">Upcoming Events</h4>
                         </div>
-                        <?php if ($_SESSION['username'] == $query["id"]) : //we get query["id"] from profile.php ?>
+                        <?php if (isset($_SESSION['username']) && ($_SESSION['username'] == $query["id"])) : //we get query["id"] from profile.php ?>
 <!--                            Only show this if the user is viewing their own page-->
                         <div class="col-lg-6 col-md-6 text-right my-auto">
                             <button class="btn btn-info" data-toggle="modal" data-target="#createEventModal">Add a new event</button>
