@@ -13,7 +13,7 @@
                         <div class="profile-info">
                             <h3 class="card-title">Company Name</h3>
                             <h6 class="card-subtitle mb-2 text-muted">Organization</h6>
-                            <span class="badge badge-pill badge-info">2 Current Events</span>
+                            <span class="badge badge-pill badge-info">3 Current Events</span>
                         </div>
                     </div>
                     <hr>
@@ -57,37 +57,8 @@
                         <?php endif; ?>
                     </div>
                     <hr>
-                    <div class="card event-listing">
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="img float-left"
-                                         style="background-image: url('http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'); margin-right:15px;">
-                                    </div>
-                                    <h4 class="card-title">Event 2</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
-                                    <p class="card-text">Event description</p>
-                                    <a href="#" class="btn btn-outline-success">Going</a>
-                                    <a href="#" class="btn btn-outline-primary">Not Interested</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card event-listing">
-                        <div class="card-block">
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <div class="img float-left"
-                                         style="background-image: url('http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'); margin-right:15px;">
-                                    </div>
-                                    <h4 class="card-title">Event 2</h4>
-                                    <h6 class="card-subtitle mb-2 text-muted">Organization Name</h6>
-                                    <p class="card-text">Event description</p>
-                                    <a href="#" class="btn btn-outline-success">Going</a>
-                                    <a href="#" class="btn btn-outline-primary">Not Interested</a>
-                                </div>
-                            </div>
-                        </div>
+                    <div id = "result">
+<!--                        Handlebars will populate this with events. Template is below-->
                     </div>
                 </div>
             </div>
@@ -100,6 +71,28 @@
             </div>
         </div>
     </div>
+
+    <!-- Template for Handlebars -->
+    <script id="event-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <div class="card event-listing">
+            <div class="card-block">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="img float-left"
+                             style="background-image: url('http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg'); margin-right:15px;">
+                        </div>
+                        <h4 class="card-title">{{Event_Name}}</h4>
+                        <h6 class="card-subtitle mb-2 text-muted">{{Organization_Name}}</h6>
+                        <p class="card-text">{{Event_description}}</p>
+                        <a href="#" class="btn btn-outline-success">Going</a>
+                        <a href="#" class="btn btn-outline-primary">Not Interested</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
 
 
     <!-- Create Event Modal -->
