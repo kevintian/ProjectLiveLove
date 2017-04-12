@@ -1,5 +1,5 @@
 # This is the only directory users should be accessing anyways
-DirectoryIndex home.html
+DirectoryIndex home.php
 
 # basic compression
 <IfModule mod_gzip.c>

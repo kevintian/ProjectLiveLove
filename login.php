@@ -38,7 +38,7 @@ if(isset($_SESSION['username']) && isset($_SESSION['user_type'])) {
     <div class="navbar-collapse collapse">
         <!--Hack to center navbar brand relatively-->
     </div>
-    <a class="navbar-brand mx-auto font-bold" href="home.html">
+    <a class="navbar-brand mx-auto font-bold" href="home.php">
         <img src="img/mylivelovewhite.png" class="d-inline-block align-middle" width="50" height="50" alt="">
     </a>
     <button class="navbar-toggler navbar-toggler-right navbar-drawer-expand" type="button" data-toggle="collapse"
