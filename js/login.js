@@ -6,14 +6,20 @@ $(function () {
         e.preventDefault();
         $.ajax({
             type: 'POST',
-            url: '/ProjectLiveLove/php/login.php',
+            url: '/ProjectLiveLove/php/loginValidation.php',
             data: {
                 username: $("#username").val(),
                 password: $("#password").val()
             },
             success: function (data) {
-                alert(data);
-                $(location).attr('href', 'user-profile.html');
+                if(data.localeCompare("USER")) {
+                    $(location).attr('href', 'user-profile.html');
+                } else if (data.localeCompare("COMPANY")){
+                    $(location).attr('href', 'company-profile.html');
+                } else {
+                    alert(data); //Gives popup warning message
+                }
+
             },
             error: function (xhr, ajaxOptions, thrownError) {
                 alert(xhr.status);

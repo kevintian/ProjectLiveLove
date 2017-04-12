@@ -11,6 +11,8 @@ $lastname = $_POST["lastname"];
 $username = $_POST["username"];
 $password = $_POST["password"];
 $email = $_POST["email"];
+$accountType = $_POST["accountType"];
+
 //    $phonenumber= $_POST["phonenumber"];
 //    $city= $_POST["city"];
 //    $state= $_POST["state"];
@@ -32,8 +34,8 @@ if ($response->num_rows == 0) {
     $user_created = true;
 
     //Insert into into database
-    $stmt = $dbc -> prepare('INSERT INTO accounts(username, password, email) VALUES(?,?,?)');
-    $stmt->bind_param('sss', $username, $hashed_pass, $email);
+    $stmt = $dbc -> prepare('INSERT INTO accounts(username, password, email, accountType) VALUES(?,?,?,?)');
+    $stmt->bind_param('ssss', $username, $hashed_pass, $email, $accountType);
 
     if (!$stmt->execute()) {
         $user_created = false;

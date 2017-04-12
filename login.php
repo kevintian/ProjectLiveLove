@@ -1,3 +1,17 @@
+<?php
+session_start();
+
+if(isset($_SESSION['username']) && isset($_SESSION['user_type'])) {
+    if($_SESSION['user_type'] == "USER") {
+        header("location: user-profile.html");
+        exit();
+    } else {
+        header("location: company-profile.html");
+        exit();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -16,8 +30,6 @@
 
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/forms.css"/>
-
-
 
 </head>
 
