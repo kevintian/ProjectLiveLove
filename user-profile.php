@@ -31,7 +31,7 @@ $row = mysqli_fetch_assoc($response); //Gets the first (and only) row as an asso
                             </h3>
                             <h6 class="card-subtitle mb-2 text-muted">Volunteer</h6>
                             <span class="badge badge-danger">
-                                <?php echo htmlspecialchars($row['points']); ?>
+                                <?php echo htmlspecialchars($row['points']." Points"); ?>
                             </span>
                             <div style="padding-top: 5px;">
                                 <span class="badge badge-pill badge-info">Poverty & Relief</span>

@@ -78,7 +78,7 @@ require 'navbar.php';
     </div>
 
     <div class="text-center" style="padding: 30px;">
-        <h1 class="font-bold">Explore Volunteer Opportunities</h1>
+        <h1 class="font-bold">Find Nonprofits By Cause</h1>
     </div>
 
     <div class="container-fluid">
